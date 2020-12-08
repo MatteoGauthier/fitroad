@@ -1,4 +1,4 @@
-{%- include components/title-2.html content="Notre équipe" -%}
+<h2>Notre équipe</h2>
 
 <ul class="team-members">
     <li>{%- include components/container-team-member.html photo="https://picsum.photos/300/300" nom="Vanon" -%}</li>
@@ -7,13 +7,12 @@
 <style>
     .team-members {
         width: 100vw;
+        margin: 0;
+        padding: 0;
         background-color: pink;
         list-style: none;
+        display: flex;
         justify-content: center;
-    }
-
-    .team-members img {
-        width: 10vw;
-        border-radius: 10000px;
+        align-items: center;
     }
 </style>
