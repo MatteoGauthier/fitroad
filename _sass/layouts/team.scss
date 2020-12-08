@@ -8,18 +8,16 @@
         align-items: center;
         
         width: 100%;
-        margin: 0;
-        padding: 0;
-    
+
         list-style: none;
         overflow-x: auto;
-
-        li{
+        
+        li:not(:last-child){
             margin-right: 50px;
+        }
 
-            &:first-child {
-                margin-left: 50px;
-            }
+        li:last-child {
+            margin-right: 50px;
         }
     }
 }
