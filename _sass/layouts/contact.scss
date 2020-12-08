@@ -31,10 +31,11 @@ $font-stack:    'Inter', sans-serif;
 
     padding: 0 46px;
 
-    input[type=text] {
+    input[type=text], .contact-message {
         width: 100%;
         padding: 12px;
-        margin: 5px 0 22px 0;
+        margin-bottom: 20px;
+        margin-top: 6px;
         display: inline-block;
 
         border: none;
@@ -44,14 +45,19 @@ $font-stack:    'Inter', sans-serif;
 
         font-family: $font-stack;
         font-size: .6255rem;
-        color: #AEAEAE;
+        color: #d4d4d4;
+
+        &:focus {
+            background: #ecf8fc;
+            color: #000000;
+        }
     }
 
     input[type=submit] {
-        width: 60%;
+        width: 70%;
         padding: 12px;
-        margin: 5px 0 22px 0;
-        display: inline-block;
+        margin: 5px auto 55px auto;
+        // display: inline-block;
 
         border: none;
         border-radius: 2px;
@@ -59,7 +65,7 @@ $font-stack:    'Inter', sans-serif;
         background: #1D4ED8;
 
         font-family: $font-stack;
-        font-size: .6255rem;
+        font-size: 1.125rem;
         color: #FFFDFD;
     }
 
@@ -69,4 +75,13 @@ $font-stack:    'Inter', sans-serif;
         color: #FFFFFF;
     }
 
+}
+
+.contact-form-submit {
+    text-align: center;
+}
+
+.contact-message {
+    min-height: 110px;
+    resize: none;
 }
