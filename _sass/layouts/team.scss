@@ -1,13 +1,24 @@
-.team-members {
-    @extend .flex-center;
+.team-section {
+    h2 {
+        margin-bottom: 3vw;
+    }
 
-    min-width: 100vw;
-    margin: 0;
-    padding: 0;
+    .team-members {
+        display: flex;        
+        align-items: center;
+        
+        width: 100%;
 
-    list-style: none;
+        list-style: none;
+        overflow-x: auto;
+        
+        li:not(:last-child){
+            margin-right: 50px;
+        }
 
-    li:not(:last-child){
-        margin-right: 50px;
+        li:last-child {
+            margin-right: 50px;
+        }
     }
 }
+
