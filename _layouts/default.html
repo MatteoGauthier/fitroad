@@ -7,6 +7,16 @@
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
   </head>
   <body>
-    {{ content}}
+    {%- include layouts/header.html -%}
+
+    {%- include layouts/hero.html -%}
+
+    {%- include layouts/configurator.html -%}
+
+    {%- include layouts/team.html -%}
+
+    {%- include layouts/contact.html -%}
+
+    {%- include layouts/footer.html -%}
   </body>
 </html>
