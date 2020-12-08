@@ -1,3 +1,72 @@
-.contact-us {
-    background-color: black;
+$font-stack:    'Inter', sans-serif;
+
+.contact-container {
+    width: 100%;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(10, 10, 10, 0.4) 0%,
+        rgba(10, 10, 10, 0.4) 100%), url('/assets/img/contact-background.jpg');
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    form {
+        input {
+            color: pink;
+        }
+    }
+}
+
+.contact-title {
+    color: #fff;
+    font: $font-stack;
+    font-size: 1.5rem;
+
+    padding: 20px 0;
+    text-align: center;
+}
+
+.contact-form {
+
+    padding: 0 46px;
+
+    input[type=text] {
+        width: 100%;
+        padding: 12px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+
+        border: none;
+        border-radius: 2px;
+
+        background: #FFFFFF;
+
+        font-family: $font-stack;
+        font-size: .6255rem;
+        color: #AEAEAE;
+    }
+
+    input[type=submit] {
+        width: 60%;
+        padding: 12px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+
+        border: none;
+        border-radius: 2px;
+
+        background: #1D4ED8;
+
+        font-family: $font-stack;
+        font-size: .6255rem;
+        color: #FFFDFD;
+    }
+
+    label {
+        font-family: $font-stack;
+        font-size: .875rem;
+        color: #FFFFFF;
+    }
+
 }
