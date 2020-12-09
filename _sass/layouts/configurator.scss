@@ -1,3 +1,51 @@
 .test-text {
-    color:red;
+  color: red;
 }
+
+.text-white {
+  color: #fff;
+}
+
+#config {
+  h2 {
+    text-align: center;
+  }
+  h3 {
+    font-family: Inter;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.015em;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+
+.config-group {
+  div {
+    width: 100%;
+    height: 100%;
+  }
+  label {
+    @extend .bg-gris-3;
+    @extend .text-dark;
+    @extend .flex;
+    @extend .w-full;
+    @extend .py-3;
+    @extend .items-center;
+    @extend .justify-center;
+  }
+  input[type="radio"] {
+    @extend .appearance-none;
+    display: none;
+    &:checked {
+      ~ label {
+        @extend .text-white;
+        @extend .bg-dark;
+      }
+    }
+  }
+}
+
+// .switchLabel .switch:not(:checked) ~ span.left
