@@ -1,0 +1,77 @@
+.cookie-banner {
+    width: 50vw;
+    position: fixed;
+    bottom: 1vw;
+    left: 5%;
+    border-radius: 8px;
+    padding: 4vw;
+    
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.418);
+
+    @media screen and (max-width: 640px) {
+        & {
+            width: 95vw;
+            left: 50%;
+            transform: translate(-50%, 0%);
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        & {
+            width: 30vw;
+            left: 5%;
+            padding: 1vw;
+        }
+    }
+
+    h2 {
+        font-size: 2.3rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+        line-height: 22px;
+        margin-top: 2vh;
+        margin-bottom: 7vh;
+        color: rgb(53, 53, 53);
+    }
+
+    img {
+        position: absolute;
+        top: -30%;
+        right: 0;
+    }
+
+    .actions {
+        display: flex;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        button {
+            width: 100%;
+            background-color: transparent;
+            padding: 1px;
+
+            border-color:#AFAFAF;
+            border-style: solid;
+            border-left-width: 2px;
+            border-top-width: 2px;
+            border-bottom-width: 2px;
+            border-right-width: 1px;
+
+            font-size: 1.08rem;
+
+            &:first-child {
+                border-bottom-left-radius: 8px;
+            }
+
+            &:last-child {
+                color: $bleu;
+                border-bottom-right-radius: 8px;
+            }
+        }
+    }
+}

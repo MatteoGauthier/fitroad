@@ -1,6 +1,8 @@
 .team-section {
+    margin-bottom: 10vh;
+
     h2 {
-        margin-bottom: 3vw;
+        margin-bottom: 7vh;
     }
 
     .team-members {
@@ -8,16 +10,13 @@
         align-items: center;
         
         width: 100%;
+        padding-bottom: 3vh;
 
         list-style: none;
         overflow-x: auto;
         
         li:not(:last-child){
-            margin-right: 50px;
-        }
-
-        li:last-child {
-            margin-right: 50px;
+            margin-right: 1px;
         }
     }
 }
