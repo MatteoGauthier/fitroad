@@ -1,23 +1,23 @@
 .team-section {
-    overflow: scroll;
     margin-bottom: 10vh;
-
+    width: 100%;
     h2 {
         margin-bottom: 7vh;
     }
 
     .team-members {
-        display: flex;        
-        align-items: center;
-        
-        width: 100%;
-        padding-bottom: 3vh;
+        display: flex;  
+        align-items: center;    
+        justify-content: left;      
 
-        list-style: none;
         overflow-x: auto;
-        
-        li:not(:last-child){
-            margin-right: 1px;
+        padding-left: 0;
+        list-style: none;
+
+        @media screen and (min-width: 1600px) {
+            justify-content: center;  
+            width: 100vw;    
+            overflow-x: hidden;
         }
     }
 }
