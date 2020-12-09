@@ -91,8 +91,13 @@ html {
             color: #000000;
         }
 
+        
         @media (min-width: 1024px){
             font-size: 1rem;
+            &:hover {
+                transition: all 0.1s ease-out 0.1s;
+                transform: scale(1.005);
+            }
         }
     }
 
@@ -109,6 +114,13 @@ html {
         font-family: $font-stack;
         font-size: 1.125rem;
         color: #FFFDFD;
+
+        transition: all 0.2s ease-in 0.1s;
+
+        &:hover {
+            background-color: rgb(191, 214, 243);
+            color: rgb(50, 50, 92);
+        }
 
         @media (min-width: 1024px){
             width: 216px;

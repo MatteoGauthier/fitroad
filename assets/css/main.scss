@@ -1,13 +1,17 @@
 ---
 ---
 
+@import "reset";
 @import "main";
-@import "utils";
+@import "utilities/functions";
+@import "utilities/shorthand";
 @import "layouts/contact";
 @import "layouts/configurator";
 @import "layouts/footer";
 @import "layouts/header";
 @import "layouts/team";
+@import "layouts/player";
+@import "layouts/hero";
 @import "components/btn-input";
 @import "components/btn-submit";
 @import "components/container-team-member";
