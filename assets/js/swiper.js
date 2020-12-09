@@ -1,5 +1,4 @@
 $(document).ready(function(){
-
     $(".buddy").on("swiperight",function(){
       $(this).addClass('rotate-left').delay(700).fadeOut(1);
       $('.buddy').find('.status').remove();
