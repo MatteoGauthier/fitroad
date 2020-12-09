@@ -6,7 +6,7 @@
             <p>Vous rencontrez un problème sur notre site web ?</p>
             <p>Ecrivez-nous un petit message !</p>
         </div>
-        <form class="contact-form" action="">
+        <form action='' onsubmit="sendEmailContact()" id="contact" class="contact-form">
             <div class="contact-form-name">
                 <div>
                     <label>Nom</label>
@@ -21,10 +21,12 @@
             <input type="text" placeholder="Votre adresse mail..">
             <label>Message</label>
             <!-- <input class="heighttext" type="text" placeholder="Votre message.."> -->
-            <textarea class="contact-message" name="textarea" placeholder="Votre message.."></textarea>
+            <textarea id="message" class="contact-message" name="textarea" placeholder="Votre message.."></textarea>
             <div class="contact-form-submit">
                 <input type="submit" value="Contacter">
+                </a>
             </div>
         </form>
     </div>
 </section>
+<script src="/assets/js/sendingEmail.js"></script>
