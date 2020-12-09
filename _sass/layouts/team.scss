@@ -1,24 +1,43 @@
 .team-section {
+    margin-top: 8vh;
     margin-bottom: 10vh;
-    width: 100%;
+    overflow-x: hidden;
+
     h2 {
-        margin-bottom: 7vh;
+        margin-bottom: 5vh;
+    }
+
+    .subtitle {
+        display: none;
+        width: 30vw;
+        margin: 0 auto;
+        text-align: center;
+        color: grey;
+        font-weight: bold;
     }
 
     .team-members {
         display: flex;  
         align-items: center;    
         justify-content: left;      
-
-        overflow-x: auto;
+        margin-top: 12vh;
         padding-left: 0;
         list-style: none;
+        overflow-x: auto;
+    }
 
-        @media screen and (min-width: 1600px) {
-            justify-content: center;  
+    // Hide subtitles under heading and make team list scrollable
+    @media screen and (min-width: 1600px) {
+        .subtitle {
+            display: block;
+        }
+
+        .team-members {
+            justify-content: center;
             width: 100vw;    
             overflow-x: hidden;
         }
     }
+
 }
 

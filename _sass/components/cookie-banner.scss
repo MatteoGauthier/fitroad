@@ -40,8 +40,10 @@
 
     img {
         position: absolute;
-        top: -30%;
+        width: 35%;
+        top: 0;
         right: 0;
+        transform: translate(20%, -50%);
     }
 
     .actions {
@@ -54,7 +56,7 @@
         button {
             width: 100%;
             background-color: transparent;
-            padding: 1px;
+            padding: 10px;
 
             border-color:#AFAFAF;
             border-style: solid;
@@ -67,11 +69,26 @@
 
             &:first-child {
                 border-bottom-left-radius: 8px;
+                color: rgb(70, 70, 70);
+                transition: color 0.4s, border-color 0.4s;
+
+                &:hover {
+                    color: black;
+                    border-color: rgb(59, 59, 59);
+                }
             }
 
             &:last-child {
                 color: $bleu;
                 border-bottom-right-radius: 8px;
+
+                transition: background-color 0.4s, color 0.4s, border-color 0.4s;
+                
+                &:hover {
+                    background-color: $bleu;
+                    border-color: $bleu;
+                    color: white;
+                }
             }
         }
     }
