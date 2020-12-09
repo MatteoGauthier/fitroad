@@ -1,3 +1,11 @@
+.appearance-none {
+  appearance: none;
+}
+
+.text-white {
+  color: #fff;
+}
+
 // Text size utility
 
 .text-xs {
@@ -446,4 +454,16 @@
 
 .w-screen {
   width: 100vw;
+}
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
 }
