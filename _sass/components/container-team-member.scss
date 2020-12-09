@@ -12,6 +12,19 @@
 
     p {
         margin-top: 1vw;
+        margin-bottom: 0;
         font-size: 1.375rem;
+    }
+
+    .job {
+        display: none;
+        font-size: 1.1rem;
+        padding-bottom: 0.4vw;
+        color: grey;
+        margin: 0.5vw 0 0 0;
+
+        @media screen and (min-width: 900px) {
+            display: block;
+        }
     }
 }
