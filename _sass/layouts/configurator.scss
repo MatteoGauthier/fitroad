@@ -9,6 +9,14 @@
 #config {
   h2 {
     text-align: center;
+    @include md {
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 58px;
+      letter-spacing: -0.045em;
+      text-align: center;
+    }
   }
   h3 {
     font-family: Inter;
@@ -50,4 +58,5 @@
   }
 }
 
-// .switchLabel .switch:not(:checked) ~ span.left
+@media (min-width: 768px) {
+}
