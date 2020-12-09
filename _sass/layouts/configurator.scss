@@ -35,6 +35,8 @@
     @extend .py-3;
     @extend .items-center;
     @extend .justify-center;
+    @extend .shadow;
+    @extend .rounded;
   }
   input[type="radio"] {
     @extend .appearance-none;
