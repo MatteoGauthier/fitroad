@@ -1,16 +1,16 @@
 .hero-container {
-    margin-top: -1vh;
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding-left: 50px;
-    padding-top: 20px;
      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 82.73%, #040405 94.06%, #040405 100%), 
     linear-gradient(249.75deg, #01061F 0%, rgba(0, 0, 0, 0) 78.93%), linear-gradient(116.78deg, #000000 0%, rgba(0, 0, 0, 0) 90.87%), 
     url('/assets/img/bc_hero.jpg');   
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    justify-content: center;
+    padding: 10%;
+    align-content: center;
 }
 
 #hero_svg1{
@@ -34,14 +34,14 @@
 }
 
 .hero-container button{
-    width: 80vw;
-    height: 53px;
+    width: 100%;
     border: 0;
     display: flex;
     background-color: #1D4ED8;
     border-radius: 10px;
     justify-content: center;
-    padding-top: 10px;
+    padding: 10px;
+    flex-direction: center;
 }
 
 
@@ -51,13 +51,14 @@
     color: white;
 }
 
-#text_hero{
-    margin-left: 12px;
-    font-size: 20px;
+#text_hero_button{
+    font-size: 14px;
     color: white;
-    padding-top: 3px;
+    margin-left: 5%;
 }
 
-
+.button{
+    align-items: center;
+}
 
 
