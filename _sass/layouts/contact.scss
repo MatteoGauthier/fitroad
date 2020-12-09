@@ -1,5 +1,11 @@
 $font-stack: 'Inter', sans-serif;
 
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
 
 .contact-container {
     width: 100%;
@@ -7,19 +13,15 @@ $font-stack: 'Inter', sans-serif;
         to bottom,
         rgba(10, 10, 10, 0.4) 0%,
         rgba(10, 10, 10, 0.4) 100%), url('/assets/img/contact-background.jpg');
-
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     padding: 34px 0;
-
-
 }
 
 .contact-box {
     margin: 0px;
     background-color: transparent;
-    
     @media (min-width: 640px) {
         background-color: rgba($color: #b6b9c2, $alpha: 0.4);
         margin: 0 10%;
@@ -30,7 +32,6 @@ $font-stack: 'Inter', sans-serif;
         width: 770px;
     }
 }
-
 
 .contact-title {
     text-align: center;
@@ -51,32 +52,33 @@ $font-stack: 'Inter', sans-serif;
 
 .contact-description {
     display: none;
+    padding: 0 46px 20px 46px;
 
     font-family: $font-stack;
     font-size: 1.125rem;
     font-weight: 400;
     color: $white;
 
-    padding: 0 46px 20px 46px;
     @media (min-width: 1024px){
         display: block;
+        p {
+            margin: 4px;
+        }
     }
 }
 
 .contact-form {
-
     padding: 0 46px;
-
+    box-sizing: border-box;
     input[type=text], .contact-message {
+        display: inline-block;
+        border: none;
+
         width: 100%;
         padding: 12px;
-        margin-bottom: 20px;
-        margin-top: 6px;
-        display: inline-block;
+        margin: 20px 0 6px 0;
 
-        border: none;
         border-radius: 2px;
-
         background: $white;
 
         font-family: $font-stack;
@@ -107,6 +109,7 @@ $font-stack: 'Inter', sans-serif;
         font-family: $font-stack;
         font-size: 1.125rem;
         color: #FFFDFD;
+
         @media (min-width: 1024px){
             width: 216px;
         }
@@ -121,6 +124,18 @@ $font-stack: 'Inter', sans-serif;
         @media (min-width: 1024px){
             font-size: 1.125rem;
 
+        }
+    }
+
+    .contact-form-name {
+        display: inherit;
+        width: 100%;
+        @media (min-width: 1024px){
+            display: flex;
+            justify-content: space-between;
+            div {
+                width: 325px;
+            }
         }
     }
 
