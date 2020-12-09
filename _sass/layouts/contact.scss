@@ -1,4 +1,5 @@
-$font-stack:    'Inter', sans-serif;
+$font-stack: 'Inter', sans-serif;
+
 
 .contact-container {
     width: 100%;
@@ -10,21 +11,56 @@ $font-stack:    'Inter', sans-serif;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    padding: 34px 0;
 
-    form {
-        input {
-            color: pink;
-        }
+
+}
+
+.contact-box {
+    margin: 0px;
+    background-color: transparent;
+    
+    @media (min-width: 640px) {
+        background-color: rgba($color: #b6b9c2, $alpha: 0.4);
+        margin: 0 10%;
+    }
+
+    @media (min-width: 1024px){
+        margin-left: 80px;
+        width: 770px;
     }
 }
 
-.contact-title {
-    color: #fff;
-    font: $font-stack;
-    font-size: 1.5rem;
 
-    padding: 20px 0;
+.contact-title {
     text-align: center;
+    padding: 20px 0;
+    
+    font-family: $font-stack;
+    font-size: 1.5rem;
+    font-weight: 800;
+    
+    color: #fff;
+
+    @media (min-width: 1024px){
+        text-align: left;
+        font-size: 2.25rem;
+        padding-left: 46px;
+    }
+}
+
+.contact-description {
+    display: none;
+
+    font-family: $font-stack;
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: $white;
+
+    padding: 0 46px 20px 46px;
+    @media (min-width: 1024px){
+        display: block;
+    }
 }
 
 .contact-form {
@@ -41,44 +77,60 @@ $font-stack:    'Inter', sans-serif;
         border: none;
         border-radius: 2px;
 
-        background: #FFFFFF;
+        background: $white;
 
         font-family: $font-stack;
-        font-size: .6255rem;
+        font-size: 0.75rem;
+        font-weight: 400;
         color: #d4d4d4;
 
         &:focus {
             background: #ecf8fc;
             color: #000000;
         }
+
+        @media (min-width: 1024px){
+            font-size: 1rem;
+        }
     }
 
     input[type=submit] {
         width: 70%;
         padding: 12px;
-        margin: 5px auto 55px auto;
-        // display: inline-block;
+        margin: 5px auto 20px auto;
 
         border: none;
         border-radius: 2px;
 
-        background: #1D4ED8;
+        background: $bleu;
 
         font-family: $font-stack;
         font-size: 1.125rem;
         color: #FFFDFD;
+        @media (min-width: 1024px){
+            width: 216px;
+        }
     }
 
     label {
         font-family: $font-stack;
         font-size: .875rem;
+        font-weight: 500;
         color: #FFFFFF;
+
+        @media (min-width: 1024px){
+            font-size: 1.125rem;
+
+        }
     }
 
 }
 
 .contact-form-submit {
     text-align: center;
+    @media (min-width: 1024px){
+        text-align: right;
+    }
 }
 
 .contact-message {
