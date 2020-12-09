@@ -7,6 +7,16 @@
     flex-direction: column;
     padding-left: 50px;
     padding-top: 20px;
+    /*background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 82.73%, #040405 94.06%, #040405 100%), 
+    linear-gradient(249.75deg, #01061F 0%, rgba(0, 0, 0, 0) 78.93%), linear-gradient(116.78deg, #000000 0%, rgba(0, 0, 0, 0) 90.87%), 
+    url('/assets/img/bc_hero.jpg');*/
+    background-image: linear-gradient(
+        to bottom,
+        rgba(10, 10, 10, 0.4) 0%,
+        rgba(10, 10, 10, 0.4) 100%), url('/assets/img/bc_hero.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #hero_svg1{
@@ -53,3 +63,7 @@
     color: white;
     padding-top: 3px;
 }
+
+
+
+
