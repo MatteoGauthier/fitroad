@@ -23,7 +23,22 @@
     }
   }
   .mockups {
-    /**/
+    display: flex;
+    align-items: flex-start;
+    img {
+      filter:drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.1)) drop-shadow(0px 6px 10px rgba(0, 0, 0, 0.04))
+    }
+    .frame-front {
+      max-width: 250px;
+      z-index: 10;
+      margin-left: -70px;
+
+    }
+    .frame-back {
+      max-width: 187px;
+      z-index: 0;
+      margin-top: 16px;
+    }
   }
 
   .configurator {
@@ -36,7 +51,7 @@
         text-align: left;
         p {
           font-size: 14px;
-          color: $gris-sombre
+          color: $gris-sombre;
         }
         h2 {
           font-size: 48px;
