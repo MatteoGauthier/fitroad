@@ -1,13 +1,11 @@
-.header{
-    background-color: black;
-    height: 57px;
-    width: 375px;
-    position: fixed;
-    display: flex;
+.header {
+  background-color: black;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: start;
 }
 
-.logo{
-    height: 57px;
-    width: 375px;
-    padding: 10px;
+.logo {
+  height: 57px;
 }
