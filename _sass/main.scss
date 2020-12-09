@@ -1,4 +1,5 @@
 $black: #000000;
+$dark: #161616;
 $white: #ffffff;
 
 $cyan: #95dfca;
@@ -8,6 +9,7 @@ $bleu-sombre: #1e293b;
 
 $gris-1: #f8fafc;
 $gris-2: #f9fafb;
+$gris-3: #F4F4F4;
 $gris-sombre: #4b5563;
 $gris-bleu-clair: #eff6ff;
 $gris-bleu-sombre: #404040;
@@ -48,4 +50,19 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.bg-blue {
+  background-color: $bleu;
+}
+
+.bg-dark {
+  background-color: $dark;
+}
+
+.text-dark {
+  color: $dark;
+}
+.bg-gris-3 {
+  background-color: $gris-3;
 }
