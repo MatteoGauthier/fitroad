@@ -1,7 +1,7 @@
-<section id="config">
-  <div>
-    <h2>Configurer votre entraînement</h2>
-
+<section id="config" class="mx-9">
+  <h2 class="w-10/12">Configurer votre entraînement</h2>
+  <div class="mt-10">
+    <h3>Choisissez un niveau</h3>
     <div class="config-group">
       <div class="">
         <input checked id="config-1-beginner" class="" name="config-1" value="beginner" type="radio" />
@@ -17,4 +17,25 @@
       </div>
     </div>
   </div>
+  <div class="mt-10">
+    <h3>Choisissez ce que vous voulez travailler</h3>
+
+    <div class="config-group">
+      <div class="">
+        <input id="config-1-beginner" class="" name="config-1" value="beginner" type="radio" />
+        <label for="config-1-beginner" class="text-xl">Abdominaux</label>
+      </div>
+      <div class="mt-2">
+        <input id="config-1-medium" name="config-1" value="medium" type="radio" />
+        <label class="text-xl" for="config-1-medium">Haut du corps</label>
+      </div>
+      <div class="mt-2">
+        <input id="config-1-expert" name="config-1" value="expert" type="radio" />
+        <label class="text-xl" for="config-1-expert">Bas du corps</label>
+      </div>
+    </div>
+  </div>
+  <button class="flex items-center justify-center px-5 py-3 bg-blue rounded">
+    <span class="text-white">Commencer mon entraînement</span>
+  </button>
 </section>
