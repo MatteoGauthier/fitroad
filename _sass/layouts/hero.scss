@@ -21,6 +21,7 @@
         position: absolute;
 
         h1 {
+            color: white;
             position: relative;
             font-size: 4.4rem;
 
@@ -60,6 +61,7 @@
             .cta-container {
                 display: flex;
                 align-items: center;
+                justify-content: center;
 
                 p {
                     margin: 0;
@@ -68,7 +70,7 @@
                 }
     
                 img {
-                    margin-right: 10%;
+                    margin-right: 4%;
                 }
             }
 

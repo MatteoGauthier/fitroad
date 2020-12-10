@@ -1,15 +1,12 @@
 .header {
-  background-color: black;
-  width: 100%;
+  width: 100vw;
   position: fixed;
-  display: flex;
-  justify-content: start;
   top: 0;
-  z-index: 20;
-}
+  z-index: 10000;
+  padding: 5px 5vw;
+  background-color: black;
 
-.logo {
-  height: 57px;
-  margin-left: 10%;
-  margin-bottom: 2%;
+  svg {
+    height: 45px;
+  }
 }

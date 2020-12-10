@@ -84,7 +84,7 @@
           color: $gris-sombre;
         }
         h2 {
-          font-size: 48px;
+          font-size: 3rem;
           font-style: normal;
           font-weight: 700;
           line-height: 58px;
@@ -147,6 +147,7 @@
         .input-item {
           height: 100%;
           width: 100%;
+          cursor: pointer;
           @include md {
             width: 128px;
             height: 100%;
