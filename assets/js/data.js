@@ -51,7 +51,7 @@ const data = {
     {
       name: "Touche de cheville",
       reps: 10,
-      level: "beginner",
+      level: "beginnr",
       zone: "abs",
       path: "/assets/video/touche-beginner.mp4",
       exo_type: "touche",

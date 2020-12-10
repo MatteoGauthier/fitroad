@@ -1,26 +1,12 @@
-/* JSON datas */
-
-// async function main() {
-//   const exercicesData = await fetch("/assets/exercices.json").then((response) => {
-//     return response.json();
-//   });
-// }
-
-// main();
-
-
-
-exo = data.exercices[2]
-
 /* LikeCarousel (c) 2019 Simone P.M. github.com/simonepm - Licensed MIT */
 
 class Carousel {
   constructor(element) {
     this.board = element;
 
-   //  // add first two cards programmatically
-   //  this.push();
-   //  this.push();
+    //  // add first two cards programmatically
+     this.addCard({path:"/assets/video/russian-beginner.mp4"});
+     this.addCard({path:"/assets/video/russian-beginner.mp4"});
 
     // handle gestures
     this.handle();
@@ -165,7 +151,7 @@ class Carousel {
           // remove swiped card
           this.board.removeChild(this.topCard);
           // add new card
-          this.push();
+          this.addCard({path:"https://howvideo.works/hvws-animation.mp4"});
           // handle gestures on new top card
           this.handle();
         }, 200);
@@ -199,8 +185,3 @@ class Carousel {
   }
 }
 
-let board = document.querySelector("#board");
-
-let carousel = new Carousel(board);
-
-carousel.addCard(exo)

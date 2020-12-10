@@ -29,5 +29,26 @@ function startActivityView(params) {
   const userConfig = formToObject(document.querySelector(".config-inputs"));
   localStorage.setItem("work", userConfig.work);
   localStorage.setItem("level", userConfig.level);
-  document.querySelector('.player-container').classList.remove('hidden')
+  document.querySelector(".player-container").classList.remove("hidden");
+  let board = document.querySelector("#board");
+  let carousel = new Carousel(board);
+
+  const exercices = data.exercices.filter((exo) => {
+    return exo.zone == userConfig.zone, exo.level == userConfig.level;
+  });
+
+  console.log(exercices);
+
+  for (let index = 0; index < exercices.length; index++) {
+    const element = exercices[index];
+    console.log(element);
+    carousel.addCard(element)
+  }
+}
+
+function resumeActivityView(params) {
+  const userChoice = {
+    zone: window.localStorage.getItem("work"),
+    level: window.localStorage.getItem("level"),
+  };
 }
