@@ -202,7 +202,7 @@ class Carousel {
    }
 
    push() {
-      alert(exsData.reps)
+      // alert(exsData.reps)
       let card = document.createElement('div')
       let video = document.createElement("VIDEO")
       let videosrc = document.createElement('SOURCE')
