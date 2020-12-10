@@ -46,6 +46,15 @@ p {
   font-size: 1.25rem;
 }
 
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #d6d6d6;
+  border-radius: 5px;
+}
+
 // Center
 
 .center {
