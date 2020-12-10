@@ -1,38 +1,60 @@
 {
-  "abs": [
+  "exo_types": [
     {
-      "beginner": [
-        {
-          "crunch": [
-            {
-              "name": "Crunch",
-              "reps": 12,
-              "path": "/assets/video/crunch-beginner.mp4"
-            }
-          ],
-          "releve": [
-            {
-              "name": "Releve de jambe",
-              "reps": 12,
-              "path": "/assets/video/releve-beginner.mp4"
-            }
-          ],
-          "russian": [
-            {
-              "name": "Russian Twist",
-              "reps": 12,
-              "path": "/assets/video/russian-beginner.mp4"
-            }
-          ],
-          "touche": [
-            {
-              "name": "Touche de cheville",
-              "reps": 10,
-              "path": "/assets/video/touche-beginner.mp4"
-            }
-          ]
-        }
-      ]
+      "name": "crunch"
+    },
+    {
+      "name": "releve"
+    },
+    {
+      "name": "russian"
+    },
+    {
+      "name": "touche"
+    }
+  ],
+  "zones": [
+    {
+      "name": "abs"
+    }
+  ],
+  "levels": [
+    {
+      "name": "beginner"
+    }
+  ],
+  "exercices": [
+    {
+      "name": "Crunch",
+      "exo_type": "crunch",
+      "reps": 12,
+      "path": "/assets/video/crunch-beginner.mp4",
+      "zone": "abs",
+      "level": "beginner"
+    },
+    {
+      "name": "Releve de jambe",
+      "exo_type": "releve",
+      "zone": "abs",
+      "reps": 12,
+      "level": "beginner",
+      "path": "/assets/video/releve-beginner.mp4"
+    },
+    {
+      "name": "Russian Twist",
+      "reps": 12,
+      "level": "beginner",
+      "zone": "abs",
+      "exo_type": "russian",
+      "path": "/assets/video/russian-beginner.mp4"
+    },
+    {
+      "name": "Touche de cheville",
+      "reps": 10,
+      "level": "beginner",
+      "zone": "abs",
+      "path": "/assets/video/touche-beginner.mp4",
+      "exo_type": "touche"
     }
   ]
 }
