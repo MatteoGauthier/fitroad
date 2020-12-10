@@ -67,3 +67,7 @@ function resumeActivityView(params) {
     level: window.localStorage.getItem("level"),
   };
 }
+
+function closePlayer(){
+  document.querySelector(".player-container").classList.add("hidedisplay");
+}
