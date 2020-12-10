@@ -1,11 +1,16 @@
 /* JSON datas */
 
-const exercicesData = await fetch("/assets/exercices.json").then(function (response) {
-  return response.json();
-});
+// async function main() {
+//   const exercicesData = await fetch("/assets/exercices.json").then((response) => {
+//     return response.json();
+//   });
+// }
 
-var groupMuscular = 0;
-var level = 0;
+// main();
+
+
+
+exo = data.exercices[2]
 
 /* LikeCarousel (c) 2019 Simone P.M. github.com/simonepm - Licensed MIT */
 
@@ -13,9 +18,9 @@ class Carousel {
   constructor(element) {
     this.board = element;
 
-    // add first two cards programmatically
-    this.push();
-    this.push();
+   //  // add first two cards programmatically
+   //  this.push();
+   //  this.push();
 
     // handle gestures
     this.handle();
@@ -173,7 +178,7 @@ class Carousel {
     }
   }
 
-  push() {
+  addCard({ name, exo_type, reps, path, zone, level }) {
     // alert(exsData.reps)
     let card = document.createElement("div");
     let video = document.createElement("VIDEO");
@@ -185,7 +190,7 @@ class Carousel {
     video.controls = "controls";
     video.autoplay = "true";
     video.preload = "true";
-    videosrc.src = "/assets/video/pompe-expert.mp4";
+    videosrc.src = path || "/assets/video/releve-beginner.mp4";
     videosrc.type = "video/mp4";
 
     card.appendChild(video);
@@ -197,3 +202,5 @@ class Carousel {
 let board = document.querySelector("#board");
 
 let carousel = new Carousel(board);
+
+carousel.addCard(exo)

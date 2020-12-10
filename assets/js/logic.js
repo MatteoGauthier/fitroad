@@ -29,4 +29,5 @@ function startActivityView(params) {
   const userConfig = formToObject(document.querySelector(".config-inputs"));
   localStorage.setItem("work", userConfig.work);
   localStorage.setItem("level", userConfig.level);
+  document.querySelector('.player-container').classList.remove('hidden')
 }
