@@ -1,161 +1,166 @@
 .hero-section {
-    width: 100%;
-    min-height: 650px;
-    background-image: url('/assets/img/bc_hero.jpg');
-    background-size: cover;
+  width: 100%;
+  min-height: 650px;
+  background-image: url("/assets/img/bc_hero.jpg");
+  background-size: cover;
 
-    // padding: 20vh 0 20vh 15vw;
-    position: relative;
-    padding: 0 15vw;
+  // padding: 20vh 0 20vh 15vw;
+  position: relative;
+  padding: 0 15vw;
 
-    @media screen and (max-width: 500px) {
-        padding: 0;
-        min-height: 400px;
+  @media screen and (max-width: 500px) {
+    padding: 0;
+    min-height: 400px;
+  }
+
+  .hero-texts {
+    max-width: 100%;
+    height: 100%;
+    padding: 5vw;
+    display: inline-block;
+    position: absolute;
+
+    h1 {
+      position: relative;
+      font-size: 4.4rem;
+
+      span {
+        color: $bleu-clair;
+      }
+
+      img {
+        display: inline;
+        width: 1rem;
+        margin-left: 20px;
+      }
+
+      @media screen and (max-width: 400px) {
+        font-size: 3rem;
+      }
     }
 
-    .hero-texts {
-        max-width: 100%;
-        height: 100%;
-        padding: 5vw;
-        display: inline-block;
-        position: absolute;
+    p {
+      font-size: 1.2rem;
+      color: white;
+      margin-top: 1rem;
+    }
 
-        h1 {
-            position: relative;
-            font-size: 4.4rem;
+    //  Call to action
+    .cta {
+      display: inline-block;
+      width: 60%;
+      padding: 12px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      background-color: $bleu;
 
-            span {
-                color: $bleu-clair;
-            }
+      margin-top: 3rem;
 
-            img {
-                display: inline;
-                width: 1rem;
-                margin-left: 20px;
-            }
+      .cta-container {
+        display: flex;
+        align-items: center;
 
-            @media screen and (max-width: 400px) {
-                font-size: 3rem;
-            }
-        }
-    
         p {
-            font-size: 1.2rem;
-            color: white;
-            margin-top: 1rem;
-
+          margin: 0;
+          display: block;
+          font-size: 1rem;
         }
 
-        //  Call to action
-        .cta {
-            display: inline-block;
-            width: 60%;
-            padding: 12px 20px;
-            border-radius: 4px;
-            text-decoration: none;
-            background-color: $bleu;
-
-            margin-top: 3rem;
-
-            .cta-container {
-                display: flex;
-                align-items: center;
-
-                p {
-                    margin: 0;
-                    display: block;
-                    font-size: 1rem;
-                }
-    
-                img {
-                    margin-right: 10%;
-                }
-            }
-
-            @media screen and (max-width: 580px) {
-                width: 100%;
-            }
+        img {
+          margin-right: 10%;
         }
+      }
 
-
-        // Commentaires en bas (version Desktop uniquement)
-        .commentaires {
-            display: none;
-            margin-top: 3vw;
-
-            .comment-card {
-                z-index: 2;
-                
-                position: relative;
-                display: flex;
-                align-items: center;
-                padding: 5px 20px;
-                transition: transform 0.4s;
-
-                .bg-text-card {
-                    z-index: -1;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    padding: 5px 20px;
-
-                    background-color: white;
-                    border-radius: 6px;
-                }
-
-                h4 {
-                    font-size: 1.2rem;
-                    color: black;
-                    margin-bottom: 7px;
-                }
-
-                p {
-                    font-size: 1rem;
-                    margin: 0;
-                    color: rgb(34, 34, 34);
-                }
-
-                &:hover {
-                    transform: scale(1.02);
-                }
-
-                .bg-card {
-                    position: absolute;
-                    left: 50%;
-                    transform: translate(-50%, 0%);
-                    border-radius: 6px;
-                    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.24);
-
-                    &:not(:last-child) {
-                        z-index: -2;
-                        bottom: -10px;
-                        width: 96%;
-                        height: 96%;
-                        background-color: rgb(236, 236, 236);
-                    }
-
-                    &:last-child {
-                        z-index: -3;
-                        bottom: -20px;
-                        width: 92%;
-                        height: 92%;
-                        background-color: rgb(219, 219, 219);
-                    }
-                }
-            }
-        }
-
-        @media screen and (min-width: 1100px) {
-            right: 0;
-            width: 50%;
-            background-color: rgba(0, 0, 0, 0.425);
-
-            .commentaires {
-                display: block;
-            }
-        }
+      @media screen and (max-width: 580px) {
+        width: 100%;
+      }
     }
 
+    // Commentaires en bas (version Desktop uniquement)
+    .commentaires {
+      display: none;
+      margin-top: 3vw;
+
+      .comment-card {
+        z-index: 2;
+
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 5px 20px;
+        transition: transform 0.4s;
+
+        .bg-text-card {
+          z-index: -1;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          padding: 5px 20px;
+
+          background-color: white;
+          border-radius: 6px;
+        }
+
+        img {
+            width: 48px;
+            height: 48px;
+            filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.06)) drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.1));
+        }
+
+        h4 {
+          font-size: 1.2rem;
+          color: black;
+          margin-bottom: 2px;
+          padding-left: 8px;
+        }
+
+        p {
+          padding-left: 8px;
+          font-size: 0.9rem;
+          margin: 0;
+          color: rgb(34, 34, 34);
+        }
+
+        &:hover {
+          transform: scale(1.02);
+        }
+
+        .bg-card {
+          position: absolute;
+          left: 50%;
+          transform: translate(-50%, 0%);
+          border-radius: 6px;
+          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.24);
+
+          &:not(:last-child) {
+            z-index: -2;
+            bottom: -10px;
+            width: 96%;
+            height: 96%;
+            background-color: rgb(236, 236, 236);
+          }
+
+          &:last-child {
+            z-index: -3;
+            bottom: -20px;
+            width: 92%;
+            height: 92%;
+            background-color: rgb(219, 219, 219);
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: 1100px) {
+      right: 0;
+      width: 50%;
+      background-color: rgba(0, 0, 0, 0.425);
+
+      .commentaires {
+        display: block;
+      }
+    }
+  }
 }
