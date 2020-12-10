@@ -59,6 +59,7 @@
       .cta-container {
         display: flex;
         align-items: center;
+        justify-content: center;
 
         p {
           margin: 0;
@@ -67,7 +68,7 @@
         }
 
         img {
-          margin-right: 10%;
+          margin-right:0.5rem;
         }
       }
 
