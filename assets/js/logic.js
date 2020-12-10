@@ -44,7 +44,7 @@ confirmButton.addEventListener("click", (e) => {
 function startActivityView(userConfig) {
   localStorage.setItem("work", userConfig.work);
   localStorage.setItem("level", userConfig.level);
-  document.querySelector(".player-container").classList.remove("hidden");
+  document.querySelector(".player-container").classList.remove("hidedisplay");
   let board = document.querySelector("#board");
   let carousel = new Carousel(board);
 
