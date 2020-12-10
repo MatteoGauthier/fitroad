@@ -174,7 +174,6 @@ class Carousel {
     video.classList.add("card-video");
 
     video.controls = "controls";
-    video.autoplay = "true";
     video.preload = "true";
     videosrc.src = path || "/assets/video/releve-beginner.mp4";
     videosrc.type = "video/mp4";
