@@ -1,38 +1,38 @@
 {
-    "abs": [
+  "abs": [
+    {
+      "beginner": [
         {
-            "beginner": [
-                {
-                    "crunch": [
-                        {
-                            "name": "Crunch",
-                            "reps": 12,
-                            "path": "/assets/video/crunch-beginner.mp4"
-                        }
-                    ],
-                    "releve": [
-                        {
-                            "name": "Releve de jambe",
-                            "reps": 12,
-                            "path": "/assets/video/releve-beginner.mp4"
-                        }
-                    ],
-                    "russian": [
-                        {
-                            "name": "Russian Twist",
-                            "reps": 12,
-                            "path": "/assets/video/russian-beginner.mp4"
-                        }
-                    ],
-                    "touche": [
-                        {
-                            "name": "Touche de cheville",
-                            "reps": 10,
-                            "path": "/assets/video/touche-beginner.mp4"
-                        }
-                    ]
-                }
-            ]
+          "crunch": [
+            {
+              "name": "Crunch",
+              "reps": 12,
+              "path": "/assets/video/crunch-beginner.mp4"
+            }
+          ],
+          "releve": [
+            {
+              "name": "Releve de jambe",
+              "reps": 12,
+              "path": "/assets/video/releve-beginner.mp4"
+            }
+          ],
+          "russian": [
+            {
+              "name": "Russian Twist",
+              "reps": 12,
+              "path": "/assets/video/russian-beginner.mp4"
+            }
+          ],
+          "touche": [
+            {
+              "name": "Touche de cheville",
+              "reps": 10,
+              "path": "/assets/video/touche-beginner.mp4"
+            }
+          ]
         }
-    ]
+      ]
+    }
+  ]
 }

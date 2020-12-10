@@ -21,12 +21,12 @@ window.addEventListener(
   true
 );
 
-
 confirmButton.addEventListener("click", (e) => {
   startActivityView();
 });
 
 function startActivityView(params) {
   const userConfig = formToObject(document.querySelector(".config-inputs"));
-  console.log(userConfig);
+  localStorage.setItem("work", userConfig.work);
+  localStorage.setItem("level", userConfig.level);
 }
