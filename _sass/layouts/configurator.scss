@@ -7,56 +7,222 @@
 }
 
 #config {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2.25rem;
+  margin-right: 2.25rem;
+  margin-bottom: 1.5rem;
+
+  @include xl {
+    flex-direction: row;
+    max-width: 1280px;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-items: center;
+  }
+
   h2 {
-    text-align: center;
+    color: #000000;
+
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
     @include md {
-      font-size: 48px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 58px;
-      letter-spacing: -0.045em;
-      text-align: center;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    width: 83.333333%;
+    text-align: center;
+  }
+
+  .mockups {
+    display: none;
+    align-items: flex-start;
+    @include xl {
+      display: flex;
+      width: 40%;
+
+      img {
+        filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.1)) drop-shadow(0px 6px 10px rgba(0, 0, 0, 0.04));
+      }
+      .frame-front {
+        max-width: 250px;
+        z-index: 10;
+        margin-left: -70px;
+      }
+      .frame-back {
+        max-width: 187px;
+        z-index: 0;
+        margin-top: 16px;
+      }
     }
   }
-  h3 {
-    font-family: Inter;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 22px;
-    letter-spacing: 0.015em;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-}
 
-.config-group {
-  div {
+  .configurator {
     width: 100%;
-    height: 100%;
-  }
-  label {
-    @extend .bg-gris-3;
-    @extend .text-dark;
-    @extend .flex;
-    @extend .w-full;
-    @extend .py-3;
-    @extend .items-center;
-    @extend .justify-center;
-    @extend .shadow;
-    @extend .rounded;
-  }
-  input[type="radio"] {
-    @extend .appearance-none;
-    display: none;
-    &:checked {
-      ~ label {
-        @extend .text-white;
-        @extend .bg-dark;
+    @include xl {
+      width: 75%;
+    }
+    @include md {
+      border-radius: 8px;
+      padding: 24px 28px;
+      border: #d1d5db 1px solid;
+    }
+
+    .config-top {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      @include md {
+        text-align: left;
+        p {
+          font-size: 14px;
+          color: $gris-sombre;
+        }
+        h2 {
+          font-size: 48px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 58px;
+          letter-spacing: -0.045em;
+          text-align: left;
+          width: 100%;
+        }
+      }
+      .config-subtitle {
+        display: none;
+        @include md {
+          display: block;
+        }
+      }
+    }
+    .config-inputs {
+      // Spacing
+      @include md {
+        margin-top: 1.125rem;
+      }
+      h3 {
+        font-family: Inter;
+        font-size: 22px;
+        line-height: 22px;
+        letter-spacing: 0.015em;
+        text-align: center;
+        margin-bottom: 1rem;
+
+        @include md {
+          color: #404040;
+          font-size: 12px;
+          // line-height: 1;
+          letter-spacing: 0.015em;
+          margin-bottom: 0.5rem;
+          text-align: left;
+        }
+      }
+
+      .config-box-2 {
+        @include md {
+          margin-top: 18px;
+        }
+      }
+
+      .config-box-2,
+      .config-box {
+        margin-top: 2.5rem;
+        @include md {
+          margin-top: 14px;
+        }
+      }
+
+      .inputs-group {
+        display: flex;
+        flex-direction: column;
+        @include md {
+          flex-direction: row;
+        }
+
+        .input-item {
+          height: 100%;
+          width: 100%;
+          @include md {
+            width: 128px;
+            height: 100%;
+            display: flex;
+            margin-top: 0rem;
+            &:first-child {
+              label {
+                border-radius: 4px 0 0 4px;
+              }
+            }
+            &:last-child {
+              label {
+                border-radius: 0 4px 4px 0;
+              }
+            }
+          }
+          &:nth-child(2),
+          &:nth-child(3) {
+            margin-top: 0.5rem;
+            @include md {
+              margin-top: 0;
+            }
+          }
+          label {
+            border-radius: 0.25rem;
+            padding: 0.625rem 1rem;
+            @extend .bg-gris-3;
+            @extend .text-dark;
+            @extend .w-full;
+            @extend .py-3;
+            @extend .shadow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include md {
+              font-size: 14px;
+            }
+          }
+          input[type="radio"] {
+            @extend .appearance-none;
+            display: none;
+            &:checked {
+              ~ label {
+                @extend .text-white;
+                @extend .bg-dark;
+              }
+            }
+          }
+        }
+      }
+    }
+    .config-confirm {
+      // Spacing
+      margin-top: 1.125rem;
+      p {
+        display: none;
+        font-size: 12px;
+        color: $gris-clair;
+        i {
+          color: $gris-sombre;
+        }
+        @include md {
+          display: block;
+        }
+      }
+      button {
+        background: $bleu;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 15px;
+        color: white;
+        font-weight: 500;
+        margin-top: 8px;
       }
     }
   }
 }
 
-@media (min-width: 768px) {
-}
+// 9CA3AF
+// 4B5563
