@@ -1,10 +1,24 @@
-function OnAcceptCookies () 
+var cookieBanner;
+
+function OnCookiesBannerLoaded ()
 {
-    var elem = document.getElementById("cookie-banner");
-    elem.style.display = "none";
+    cookieBanner = document.getElementById("cookie-banner");
+
+    // Si le visiteur n'est pas venu depuis 1 jour il faut afficher de nouveau la baniere
+    if(document.cookie == "" || Date.now() - parseInt(document.cookie) > 86400000)
+    {
+        cookieBanner.style.display = "block";
+    }
 }
 
-function OnRefuseCookies () 
+function OnAcceptCookies () 
+{
+    cookieBanner.style.display = "none";
+    
+    document.cookie = Date.now();
+}
+
+function OnRefuseCookies ()
 {
     open("https://google.com/", "_self");
 }

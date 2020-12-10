@@ -1,4 +1,5 @@
 .cookie-banner {
+    display: none;
     width: 50vw;
     position: fixed;
     bottom: 1vw;
@@ -39,8 +40,10 @@
 
     img {
         position: absolute;
-        top: -30%;
+        width: 35%;
+        top: 0;
         right: 0;
+        transform: translate(20%, -50%);
     }
 
     .actions {
@@ -53,24 +56,41 @@
         button {
             width: 100%;
             background-color: transparent;
-            padding: 1px;
+            padding: 10px;
 
             border-color:#AFAFAF;
             border-style: solid;
-            border-left-width: 2px;
             border-top-width: 2px;
             border-bottom-width: 2px;
-            border-right-width: 1px;
 
             font-size: 1.08rem;
 
             &:first-child {
+                border-right-width: 1px;
+                border-left-width: 2px;
                 border-bottom-left-radius: 8px;
+                color: rgb(70, 70, 70);
+                transition: color 0.4s, border-color 0.4s;
+
+                &:hover {
+                    color: black;
+                    border-color: rgb(59, 59, 59);
+                }
             }
 
             &:last-child {
                 color: $bleu;
+                border-right-width: 2px;
+                border-left-width: 1px;
                 border-bottom-right-radius: 8px;
+
+                transition: background-color 0.4s, color 0.4s, border-color 0.4s;
+                
+                &:hover {
+                    background-color: $bleu;
+                    border-color: $bleu;
+                    color: white;
+                }
             }
         }
     }

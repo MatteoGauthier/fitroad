@@ -11,15 +11,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.5.0-rc1/jquery.mobile-1.5.0-rc1.min.js"></script>  
+
 </head>
 
 <body>
+  
   {%- include layouts/header.html -%}
 
   <main>
-
-
     {%- include components/cookie-banner.html -%}
+
+    {%- include layouts/player.html -%}
 
     {%- include layouts/hero.html -%}
 
@@ -28,8 +33,8 @@
     {%- include layouts/team.html -%}
 
     {%- include layouts/contact.html -%}
-
   </main>
+
   {%- include layouts/footer.html -%}
   <script src="/assets/js/stylax.js"></script>
   <script src="/assets/js/index.js"></script>

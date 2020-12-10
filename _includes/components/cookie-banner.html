@@ -1,3 +1,5 @@
+<script src="assets/js/cookie-banner.js"></script>
+
 <div class="cookie-banner" id="cookie-banner">
     <h2>Cookies !</h2>
     <p>
@@ -8,7 +10,5 @@
         <button onclick="OnRefuseCookies()">Non merci</button>
         <button onclick="OnAcceptCookies()">C'est bon les cookies</button>
     </div>
-    <img src="assets/img/cookie.png" alt="Image d'un jolie cookie !">
+    <img src="assets/img/cookie.png" alt="Image d'un jolie cookie !" onload="OnCookiesBannerLoaded()" />
 </div>
-
-<script src="assets/js/cookie-banner.js"></script>
