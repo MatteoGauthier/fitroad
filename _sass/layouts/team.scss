@@ -1,44 +1,70 @@
 .team-section {
-    margin-top: 7rem;
-    margin-bottom: 3rem;
-    overflow-x: hidden;
+  margin-top: 7rem;
+  margin-bottom: 3rem;
+  overflow-x: hidden;
 
-    h2 {
-        margin-bottom: 1rem;
-    }
+  h2 {
+    margin-bottom: 1rem;
+  }
 
+  .subtitle {
+    display: none;
+    width: 30vw;
+    margin: 0 auto;
+    text-align: center;
+    color: grey;
+    font-weight: bold;
+  }
+
+  .team-members {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-top: 12vh;
+    padding-left: 0;
+    list-style: none;
+    overflow-y: scroll;
+  }
+
+  .scroll-team-parent {
+    overflow: hidden;
+    position: relative;
+    user-select: none;
+    width: 100%;
+  }
+
+  .gradient-l {
+    user-select: none;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3rem;
+    z-index: 10;
+    background: linear-gradient(-90deg, transparent, #fff);
+  }
+
+  .gradient-r {
+    user-select: none;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3rem;
+    z-index: 10;
+    background: linear-gradient(90deg, transparent, #fff);
+  }
+
+  // Hide subtitles under heading and make team list scrollable
+  @media screen and (min-width: 1600px) {
     .subtitle {
-        display: none;
-        width: 30vw;
-        margin: 0 auto;
-        text-align: center;
-        color: grey;
-        font-weight: bold;
+      display: block;
     }
 
     .team-members {
-        display: flex;  
-        align-items: center;    
-        justify-content: left;      
-        margin-top: 12vh;
-        padding-left: 0;
-        list-style: none;
-        overflow-x: auto;
-        overflow-y: hidden;
+      justify-content: center;
+      width: 100vw;
+      overflow-x: hidden;
     }
-
-    // Hide subtitles under heading and make team list scrollable
-    @media screen and (min-width: 1600px) {
-        .subtitle {
-            display: block;
-        }
-
-        .team-members {
-            justify-content: center;
-            width: 100vw;    
-            overflow-x: hidden;
-        }
-    }
-
+  }
 }
-
