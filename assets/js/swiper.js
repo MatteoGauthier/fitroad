@@ -194,13 +194,25 @@
          push() {
 
              let card = document.createElement('div')
+             let video = document.createElement("VIDEO")
+             let videosrc = document.createElement('SOURCE')
 
              card.classList.add('card')
+             video.classList.add('card-video')
 
-             card.style.backgroundImage =
-                 "url('https://picsum.photos/320/320/?random=" + Math.round(Math.random() * 1000000) + "')"
+            video.controls = "controls"
+            video.autoplay = "true"
+            video.preload = "true"
+            videosrc.src = "/assets/video/pompe-expert.mp4"
+            videosrc.type = "video/mp4"
 
-             this.board.insertBefore(card, this.board.firstChild)
+     
+            card.appendChild(video)
+            video.appendChild(videosrc)
+            this.board.insertBefore(card, this.board.firstChild)
+
+
+
 
          }
 
