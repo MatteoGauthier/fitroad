@@ -80,3 +80,7 @@ p {
 .bg-gris-3 {
   background-color: $gris-3;
 }
+
+a, button, input[type="submit"] {
+  cursor: pointer;
+}
