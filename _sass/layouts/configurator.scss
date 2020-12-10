@@ -53,11 +53,13 @@
         max-width: 250px;
         z-index: 10;
         margin-left: -70px;
+        // transition: all 500ms;
       }
       .frame-back {
         max-width: 187px;
         z-index: 0;
         margin-top: 16px;
+        // transition: all 500ms;
       }
     }
   }
