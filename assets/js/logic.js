@@ -64,6 +64,11 @@ function startActivityView(userConfig) {
     console.log(element);
     carousel.addCard("video", element);
   }
+  carousel.addCard("img", {
+    path: "/assets/img/end-card.webp",
+    name: "C'est fini pour aujourd'hui",
+    desc: "Vous avez bien travaillé ! Revenez quand vous voulez :D",
+  });
 }
 
 function resumeActivityView(params) {
