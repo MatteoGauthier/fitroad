@@ -4,7 +4,18 @@
   overflow-x: hidden;
 
   h2 {
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: bold;
     margin-bottom: 1rem;
+
+    @media screen and (min-width: 800px){
+      font-size: 3rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 58px;
+      letter-spacing: -0.045em;
+    }
   }
 
   .subtitle {

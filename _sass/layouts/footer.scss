@@ -70,7 +70,9 @@ footer {
       transition: transform 0.3s;
 
       &:hover {
-        transform: scale(1.02);
+        @media screen and (min-width: 900px) {
+          transform: scale(1.02);
+        }
       }
     }
 
