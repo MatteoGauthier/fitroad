@@ -4,9 +4,14 @@ class Carousel {
   constructor(element) {
     this.board = element;
 
+    this.playerElm = {
+      desc: document.querySelector("#exo-description"),
+      title: document.querySelector(".player-exercice"),
+    };
+
     //  // add first two cards programmatically
-     this.addCard({path:"/assets/video/russian-beginner.mp4"});
-     this.addCard({path:"/assets/video/russian-beginner.mp4"});
+    this.addCard({ path: "https://howvideo.works/hvws-animation.mp4" });
+    this.addCard({ path: "https://howvideo.works/hvws-animation.mp4" });
 
     // handle gestures
     this.handle();
@@ -148,10 +153,11 @@ class Carousel {
 
         // wait transition end
         setTimeout(() => {
+          this.updateContext(this.nextCard);
           // remove swiped card
           this.board.removeChild(this.topCard);
           // add new card
-          this.addCard({path:"https://howvideo.works/hvws-animation.mp4"});
+          // this.addCard({ path: "https://howvideo.works/hvws-animation.mp4" });
           // handle gestures on new top card
           this.handle();
         }, 200);
@@ -164,13 +170,16 @@ class Carousel {
     }
   }
 
-  addCard({ name, exo_type, reps, path, zone, level }) {
+  addCard({ name, exo_type, reps, path, zone, level, desc }, after = false) {
     // alert(exsData.reps)
     let card = document.createElement("div");
     let video = document.createElement("VIDEO");
     let videosrc = document.createElement("SOURCE");
 
     card.classList.add("card");
+    card.dataset.title = name;
+    card.dataset.desc = desc;
+    card.dataset.reps = reps;
     video.classList.add("card-video");
 
     video.controls = "controls";
@@ -180,7 +189,10 @@ class Carousel {
 
     card.appendChild(video);
     video.appendChild(videosrc);
-    this.board.insertBefore(card, this.board.firstChild);
+    after ?  this.board.insertBefore(card, this.board.lastChild.nextSibling) : this.board.insertBefore(card, this.board.firstChild)
+  }
+  updateContext(elm) {
+    this.playerElm.title.textContent = elm.dataset.title;
+    this.playerElm.desc.textContent = elm.dataset.desc || "Description is missing";
   }
 }
-

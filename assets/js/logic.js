@@ -7,9 +7,12 @@ const formToObject = (form) =>
     {}
   );
 
+// Define element variable
+
 const levelElements = document.querySelectorAll("input[name=level]");
 const workElements = document.querySelectorAll("input[name=work]");
 const confirmButton = document.querySelector("div.config-confirm > button");
+
 const randomInteger = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 // Create an instance of Notyf
 var notyf = new Notyf({
@@ -45,12 +48,12 @@ function startActivityView(userConfig) {
   localStorage.setItem("work", userConfig.work);
   localStorage.setItem("level", userConfig.level);
   document.querySelector(".player-container").classList.remove("hidedisplay");
-  let board = document.querySelector("#board");
-  let carousel = new Carousel(board);
-
   const exercices = data.exercices.filter((exo) => {
     return exo.zone == userConfig.zone, exo.level == userConfig.level;
   });
+
+  let board = document.querySelector("#board");
+  let carousel = new Carousel(board);
 
   console.log(exercices);
 
@@ -58,6 +61,8 @@ function startActivityView(userConfig) {
     const element = exercices[index];
     console.log(element);
     carousel.addCard(element);
+
+      
   }
 }
 
@@ -68,6 +73,6 @@ function resumeActivityView(params) {
   };
 }
 
-function closePlayer(){
+function closePlayer() {
   document.querySelector(".player-container").classList.add("hidedisplay");
 }
