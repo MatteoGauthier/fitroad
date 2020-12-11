@@ -18,7 +18,7 @@ class Carousel {
     this.addCard("img", {
       path: "/assets/img/introduction.webp",
       name: "Bienvenue sur le Player FitRoad",
-      desc: "Préparer votre matériel et positionné vous, l'exercice vac commencer.",
+      desc: "Préparez votre matériel et positionné vous, l'exercice va commencer.",
     });
     
     // handle gestures
@@ -196,6 +196,7 @@ class Carousel {
       video.preload = "true";
       videosrc.src = path || "/assets/video/releve-beginner.mp4";
       videosrc.type = "video/mp4";
+
       card.draggable = false;
       video.draggable = false;
       card.appendChild(video);
