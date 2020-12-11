@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Acceuil"
+title: "FitRoad Homepage"
 ---
 
 ## You're ready to go!
