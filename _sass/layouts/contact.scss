@@ -23,8 +23,9 @@ html {
     margin: 0px;
     background-color: transparent;
     @media (min-width: 640px) {
-        background-color: rgba($color: #b6b9c2, $alpha: 0.4);
+        background-color: rgba($color: #363738, $alpha: 0.6); //#686a6e
         margin: 0 10%;
+        border-radius: 6px;
     }
 
     @media (min-width: 1024px){
@@ -52,7 +53,7 @@ html {
 
 .contact-description {
     display: none;
-    padding: 0 46px 20px 46px;
+    padding: 0 46px 40px 46px;
 
     font-family: $font-stack;
     font-size: 1.125rem;
@@ -76,7 +77,7 @@ html {
 
         width: 100%;
         padding: 12px;
-        margin: 20px 0 6px 0;
+        margin: 0.5vw 0 1vw 0;
 
         border-radius: 2px;
         background: $white;
@@ -84,7 +85,11 @@ html {
         font-family: $font-stack;
         font-size: 0.75rem;
         font-weight: 400;
-        color: #d4d4d4;
+        color: black;
+
+        &::placeholder {
+            color: #535353;
+        }
 
         &:focus {
             background: #ecf8fc;
@@ -115,7 +120,7 @@ html {
         font-size: 1.125rem;
         color: #FFFDFD;
 
-        transition: all 0.2s ease-in 0.1s;
+        transition: background-color 0.3s, color 0.3s;
 
         &:hover {
             background-color: rgb(191, 214, 243);

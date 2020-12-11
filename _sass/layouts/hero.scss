@@ -22,8 +22,9 @@
 
     h1 {
       position: relative;
-      font-size: 4.4rem;
+      font-size: 4.6rem;
       color: white;
+
       span {
         color: $bleu-clair;
       }
@@ -40,7 +41,7 @@
     }
 
     p {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       color: white;
       margin-top: 1rem;
     }
@@ -54,7 +55,7 @@
       text-decoration: none;
       background-color: $bleu;
 
-      margin-top: 3rem;
+      margin-top: 1rem;
 
       .cta-container {
         display: flex;
@@ -80,7 +81,7 @@
     // Commentaires en bas (version Desktop uniquement)
     .commentaires {
       display: none;
-      margin-top: 3vw;
+      margin-top: 4.5vw;
 
       .comment-card {
         z-index: 2;
