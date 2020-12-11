@@ -10,11 +10,20 @@ class Carousel {
     };
 
     //  // add first two cards programmatically
-    this.addCard({ path: "https://howvideo.works/hvws-animation.mp4" });
-    this.addCard({ path: "https://howvideo.works/hvws-animation.mp4" });
-
+    this.addCard("img", {
+      path: "/assets/img/choice.webp",
+      name: "Vos choix",
+      desc: "Vous avez choisis de travailler les abdos avec le niveau débutants",
+    });
+    this.addCard("img", {
+      path: "/assets/img/introduction.webp",
+      name: "Bienvenue sur le Player FitRoad",
+      desc: "Préparer votre matériel et positionné vous, l'exercice vac commencer.",
+    });
+    
     // handle gestures
     this.handle();
+    this.updateContext(this.topCard)
   }
 
   handle() {
@@ -170,26 +179,49 @@ class Carousel {
     }
   }
 
-  addCard({ name, exo_type, reps, path, zone, level, desc }, after = false) {
+  addCard(type = "video", { name, exo_type, reps, path, zone, level, desc }, after = false) {
     // alert(exsData.reps)
     let card = document.createElement("div");
-    let video = document.createElement("VIDEO");
-    let videosrc = document.createElement("SOURCE");
+    if (type == "video") {
+      let video = document.createElement("VIDEO");
+      let videosrc = document.createElement("SOURCE");
 
-    card.classList.add("card");
-    card.dataset.title = name;
-    card.dataset.desc = desc;
-    card.dataset.reps = reps;
-    video.classList.add("card-video");
+      card.classList.add("card");
+      card.dataset.title = name;
+      card.dataset.desc = desc;
+      card.dataset.reps = reps;
+      video.classList.add("card-video");
 
-    video.controls = "controls";
-    video.preload = "true";
-    videosrc.src = path || "/assets/video/releve-beginner.mp4";
-    videosrc.type = "video/mp4";
+      video.controls = "controls";
+      video.preload = "true";
+      videosrc.src = path || "/assets/video/releve-beginner.mp4";
+      videosrc.type = "video/mp4";
+      card.draggable = false;
+      video.draggable = false;
+      card.appendChild(video);
+      video.appendChild(videosrc);
+    }
 
-    card.appendChild(video);
-    video.appendChild(videosrc);
-    after ?  this.board.insertBefore(card, this.board.lastChild.nextSibling) : this.board.insertBefore(card, this.board.firstChild)
+    if (type == "img") {
+      let img = document.createElement("IMG");
+
+      card.classList.add("card");
+      card.dataset.title = name;
+      card.dataset.desc = desc;
+
+      card.draggable = false;
+      img.draggable = false;
+
+      img.classList.add("card-video");
+
+      img.src = path;
+
+      card.appendChild(img);
+    }
+
+    after
+      ? this.board.insertBefore(card, this.board.lastChild.nextSibling)
+      : this.board.insertBefore(card, this.board.firstChild);
   }
   updateContext(elm) {
     this.playerElm.title.textContent = elm.dataset.title;

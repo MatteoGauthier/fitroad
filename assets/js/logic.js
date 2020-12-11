@@ -47,6 +47,8 @@ confirmButton.addEventListener("click", (e) => {
 function startActivityView(userConfig) {
   localStorage.setItem("work", userConfig.work);
   localStorage.setItem("level", userConfig.level);
+  document.querySelector("main").classList.add("hidden");
+  document.querySelector("footer").classList.add("hidden");
   document.querySelector(".player-container").classList.remove("hidedisplay");
   const exercices = data.exercices.filter((exo) => {
     return exo.zone == userConfig.zone, exo.level == userConfig.level;
@@ -60,9 +62,7 @@ function startActivityView(userConfig) {
   for (let index = 0; index < exercices.length; index++) {
     const element = exercices[index];
     console.log(element);
-    carousel.addCard(element);
-
-      
+    carousel.addCard("video", element);
   }
 }
 
@@ -74,5 +74,7 @@ function resumeActivityView(params) {
 }
 
 function closePlayer() {
+  document.querySelector("main").classList.remove("hidden");
+  document.querySelector("footer").classList.remove("hidden");
   document.querySelector(".player-container").classList.add("hidedisplay");
 }

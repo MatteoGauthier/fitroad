@@ -9,19 +9,25 @@ $font-stack: 'Inter', sans-serif;
 }
 
 .card {
-  width: 320px;
-  height: 444px;
+  width: 324px;
+  height: 576px;
   position: absolute;
-  top: 41%;
+  top: 23rem;
   left: 50%;
   border-radius: 1%;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
   background-color: white;
   transform: translateX(-50%) translateY(-50%) scale(0.95);
-
+  &, * {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
   .card-video {
     width: 100%;
-    max-height: 320px;
+    max-height: 576px ;
     object-fit: cover;
   }
 
@@ -30,16 +36,16 @@ $font-stack: 'Inter', sans-serif;
 
 
 .player-container {
-    position: fixed;
-    display: block;
-    z-index: 8;
-    width: 100%;
+    // position: fixed;
+    // display: block;
+    // z-index: 8;
+    // width: 100%;
 
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: white;
+    // top: 0;
+    // left: 0;
+    // right: 0;
+    // bottom: 0;
+    // background-color: white;
 
     .player-background {
       background: linear-gradient(45deg, #21ffd7, #60a5fa); 
@@ -53,7 +59,7 @@ $font-stack: 'Inter', sans-serif;
     
     .player-infos {
         padding: 20px;
-        padding-top: 14rem;
+        padding-top: 21.5rem
     }
 
     .player-exercice {
@@ -64,9 +70,8 @@ $font-stack: 'Inter', sans-serif;
     }
 
     .close-section {
-      position: absolute;
-      left: 0;
-      bottom: 0;
+      position: relative;
+  
       width: 100%;
       background-color: black;
       padding: 10px;
